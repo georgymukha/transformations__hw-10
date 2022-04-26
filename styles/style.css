@@ -136,10 +136,7 @@ body {
     transition: background .8s;
     cursor: pointer;
 }
-.menu__add-icon:active .menu__add-icon_plus {
-    transform: rotate(45deg);
-    transition: transform 0.3s;
-}
+
 .menu__add-icon_plus {
     background-image: url(../img/plus-inactive.svg);
     background-repeat: no-repeat;
@@ -147,8 +144,13 @@ body {
     width: 12px;
     height: 12px;
     transition: background-image .8s;
+    transition: transform 0.3s;
 }
-.menu__card:hover:hover .menu__add-icon_plus {
+.menu__add-icon_plus.is-active {
+    transform: rotate(45deg);
+    transition: transform 0.3s;
+}
+.menu__card:hover .menu__add-icon_plus {
     background-image: url(../img/plus-active.svg);
 }
 .menu__photo-wrapper {

@@ -35,7 +35,7 @@
             <div class="menu__desc">
                 There are many things are needed to start the Fast Food Business.
             </div>
-            <div class="menu__add-icon">
+            <div class="menu__add-icon" onclick="addNewClass(this)">
                 <div class="menu__add-icon_plus"></div>
             </div>
         </div>
@@ -140,5 +140,12 @@
             <a href="#" class="footer__more_link">Learn More</a>
         </div>
     </footer>
+
+    <script>
+        function addNewClass(elem){
+            var c = elem.children;
+            c[0].classList.toggle("is-active")
+        };
+    </script>
 </body>
 </html>
