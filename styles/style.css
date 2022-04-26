@@ -1,0 +1,232 @@
+body {
+    background: #E5E5E5;
+}
+.header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 60px;
+}
+.header__header {
+    margin-bottom: 9px;
+    text-transform: uppercase;
+    color: #DC780B;
+    letter-spacing: 0.2em;
+    opacity: 0.7;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+}
+.header__title {
+    margin-bottom: 25px;
+    font-family: 'Philosopher', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 31.25px;
+    line-height: 24px;
+    color: #150C01;
+}
+.header__disc {
+    margin: 0;
+    width: 750px;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #150C01;
+    opacity: 0.7;
+}
+.menu {
+    display: grid;
+    grid-template-columns: repeat(3, 360px);
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 50px;
+}
+.menu__card {
+    height: 446px;
+    filter: drop-shadow(0px 2px 5px rgba(0, 0, 0, 0.25));
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-sizing: content-box;
+    border-radius: 75px 10px 10px 10px;
+    transition: background .8s, color .8s;
+}
+.menu__card:hover {
+    filter: none;
+    background: #DC780B;
+    color: #FFFFFF;
+    border: none;
+}
+.menu__photo {
+    border-radius: 76px 10px 76px 0px;
+    background: #C4C4C4;
+    z-index: 10;
+    margin-bottom: 21px;
+}
+.menu__photo-wrapper:hover .menu__photo {
+    filter: brightness(40%);
+    transition: filter .8s;
+    
+}
+.menu__photo_icons {
+    display: flex;
+    position: absolute;
+    z-index: 10;
+    align-self: center;
+    margin: 0 129px;
+    gap: 30px;
+    filter: opacity(0%);
+}
+.menu__photo-wrapper:hover .menu__photo_icons {
+    filter: opacity(100%);
+    transition: filter .8s;
+}
+.menu__photo_icon {
+    cursor: pointer;
+}
+.menu__card:hover .menu__add-icon {
+    background: #FFFFFF;
+}
+.menu__title-price {
+    display: flex;
+    margin: 0 25px;
+    margin-bottom: 20px;
+    font-family: 'Philosopher', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 24px;
+    justify-content: space-between;
+}
+.menu__title {
+
+}
+.menu__price {
+
+}
+.menu__desc {
+    margin: 0 25px;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    opacity: 0.7;
+    margin-bottom: 20px;
+    height: 38px;
+    padding-bottom: 3px;
+    overflow-y: hidden;
+}
+.menu__add-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 34px;
+    margin-left: 25px;
+    background: #DC780B;
+    border-radius: 5px;
+    transition: background .8s;
+    cursor: pointer;
+}
+.menu__add-icon:active .menu__add-icon_plus {
+    transform: rotate(45deg);
+    transition: transform 0.3s;
+}
+.menu__add-icon_plus {
+    background-image: url(../img/plus-inactive.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 12px;
+    height: 12px;
+    transition: background-image .8s;
+}
+.menu__card:hover:hover .menu__add-icon_plus {
+    background-image: url(../img/plus-active.svg);
+}
+.menu__photo-wrapper {
+    display: flex;
+    position: relative;
+}
+.footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.footer__more {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border: 1px solid rgba(220, 119, 11, 0.1);
+    box-sizing: border-box;
+    border-radius: 5px;
+    width: 142px;
+    height: 42px;
+}
+.footer__more_link {
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    color: #DC780B;
+}
+.footer__more:hover {
+    background: #DC780B;
+    border: 1px solid rgb(220, 119, 11);
+    transition: background .7s, border .7s;
+}
+.footer__more:hover .footer__more_link {
+    color: #FFFFFF;
+    transition: color .7s;
+}
+
+/* roboto-regular - latin */
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/Roboto/roboto-v29-latin-regular.eot'); /* IE9 Compat Modes */
+    src: local(''),
+         url('../fonts/Roboto/Roboto/roboto-v29-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('../fonts/Roboto/Roboto/roboto-v29-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+         url('../fonts/Roboto/Roboto/roboto-v29-latin-regular.woff') format('woff'), /* Modern Browsers */
+         url('../fonts/Roboto/Roboto/roboto-v29-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('../fonts/Roboto/Roboto/roboto-v29-latin-regular.svg#Roboto') format('svg'); /* Legacy iOS */
+  }
+/* roboto-500 - latin */
+  @font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    src: url('../fonts/Roboto/Roboto/roboto-v29-latin-500.eot'); /* IE9 Compat Modes */
+    src: local(''),
+         url('../fonts/Roboto/roboto-v29-latin-500.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('../fonts/Roboto/roboto-v29-latin-500.woff2') format('woff2'), /* Super Modern Browsers */
+         url('../fonts/Roboto/roboto-v29-latin-500.woff') format('woff'), /* Modern Browsers */
+         url('../fonts/Roboto/roboto-v29-latin-500.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('../fonts/Roboto/roboto-v29-latin-500.svg#Roboto') format('svg'); /* Legacy iOS */
+  }
+/* philosopher-700 - latin */
+@font-face {
+    font-family: 'Philosopher';
+    font-style: normal;
+    font-weight: 700;
+    src: url('../fonts/Philosopher/philosopher-v17-latin-700.eot'); /* IE9 Compat Modes */
+    src: local(''),
+         url('../fonts/Philosopher/philosopher-v17-latin-700.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('../fonts/Philosopher/philosopher-v17-latin-700.woff2') format('woff2'), /* Super Modern Browsers */
+         url('../fonts/Philosopher/philosopher-v17-latin-700.woff') format('woff'), /* Modern Browsers */
+         url('../fonts/Philosopher/philosopher-v17-latin-700.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('../fonts/Philosopher/philosopher-v17-latin-700.svg#Philosopher') format('svg'); /* Legacy iOS */
+  }
